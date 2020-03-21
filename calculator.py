@@ -2,9 +2,11 @@ def add(num1, num2):
     return (num1 + num2)
 
 print("Enter a number: ")
-int n1 = input();
+n1 = input();
+n1 = int(n1)
 print("Now, enter another another number: ")
-int n2 = input();
+n2 = input();
+n2 = int(n2)
 print("The added numbers are: ")
-add(n1, n2)
+print(add(n1, n2))
 
