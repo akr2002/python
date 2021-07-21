@@ -41,3 +41,25 @@ class SLinkedList:
         NewNode = Node(newData)
         NewNode.nextVal = middleNode.nextVal 
         middleNode.nextVal = NewNode
+
+    # Remove a node
+    def removeNode(self, removeKey):
+        headval = self.headval 
+
+        if headval is not None:
+            if headval.dataVal = removeKey:
+                self.headval = headval.nextVal
+                headval = None
+                return
+
+        while headval is not None:
+            if headval.dataVal == removeKey:
+                break 
+            prev = headval
+            headval = headval.nextVal
+
+        if headval == None:
+            return
+
+        prev.nextVal = headval.nextVal
+        headval = none
