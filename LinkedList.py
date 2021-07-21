@@ -31,3 +31,13 @@ class SLinkedList:
         while (last.nextVal):
             last = last.nextVal
         last.nextVal = NewNode
+
+    # Insert between two nodes
+    def inBetween(self, middleNode, newData):
+        if middleNode is None:
+            print("The mentioned node is absent")
+            return 
+
+        NewNode = Node(newData)
+        NewNode.nextVal = middleNode.nextVal 
+        middleNode.nextVal = NewNode
