@@ -50,3 +50,21 @@ class DLinkedList:
         last.next = newNode 
         newNode.prev = last
         return
+
+    # Delete
+    def removeNode(self, removeKey):
+        headval = self.head
+
+        if headval is not None:
+            if headval.data == removeKey:
+                self.head = headval.next
+            else:
+                nextNode = self.next
+                prevNode = self.prev
+
+                # Delete at the end
+                if nextNode is None:
+                    prevNode.next = None
+                else:
+                    prevNode.next = nextNode
+                    nextNode.prev = prevNode
