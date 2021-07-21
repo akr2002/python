@@ -47,7 +47,7 @@ class SLinkedList:
         headval = self.headval 
 
         if headval is not None:
-            if headval.dataVal = removeKey:
+            if headval.dataVal == removeKey:
                 self.headval = headval.nextVal
                 headval = None
                 return
