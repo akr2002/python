@@ -35,3 +35,18 @@ class DLinkedList:
 
         if newNode.next is not None:
             newNode.next.prev = newNode
+
+    # Append
+    def append(self, newVal):
+        newNode = Node(newVal)
+        newNode.next = None
+        if self.head is None:
+            newNode.prev = None
+            self.head = newNode
+            return
+        last = self.head
+        while last.next is not None:
+            last = last.next
+        last.next = newNode 
+        newNode.prev = last
+        return
