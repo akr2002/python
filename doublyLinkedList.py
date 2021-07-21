@@ -22,3 +22,16 @@ class DLinkedList:
             print(node.data)
             last = node
             node = node.next
+
+    # Insert
+    def insert(self, prevNode, newVal):
+        if prevNode is None:
+            return
+
+        newNode = Node(newVal)
+        newNode.next = prevNode.next
+        prevNode.next = newNode
+        newNode.prev = prevNode
+
+        if newNode.next is not None:
+            newNode.next.prev = newNode
